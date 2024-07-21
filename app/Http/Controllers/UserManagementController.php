@@ -70,7 +70,6 @@ class UserManagementController extends Controller
         return response()->json([
             "status" => "true",
             "message" => "tesssssssssssssst",
-            "shit" => auth()->user(),
         ]);
     }
 }
