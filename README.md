@@ -11,12 +11,13 @@
 
 This is the Api part of my user management project made with Laravel 10.
 
-## Run it local
+## Run it locally
 
-#Windows
+### Windows
 
 After you clone the project on your machine open a terminal inside de project directory and run the command "php artisan key:generate" to generate a key specific for your instance.
 Install an apache server to have a mysql service, on windows is simple, install Xampp, open it enable MySql (now i think is MariaDB) then open phpmyadmin ("http://localhost/phpmyadmin/"), user: root no password.
+Create a new database called "omeron_test".
 Then you go back to terminal and run "php artisan migrate". 
 Start the api with "php artisan serve".
 Using postman call "(http://127.0.0.1:8000/api/register)" with name, email and password in form-data to create the first user. From phpmyadmin make it the admin by adding "admin" in the "role" column.
@@ -24,11 +25,13 @@ Using postman call "(http://127.0.0.1:8000/api/register)" with name, email and p
 
 Login with that user on the client (just clone that project and run "ng serve" on its directory).
 
-#Linux
+### Linux
 
 This can be complicated.
 
-Install mysql if don't have it and then 
+Install mysql if don't have it and then run "sudo mysql", create a new user because the root one will not work "CREATE USER 'user'@'hostname';" and give him some privilages "GRANT ALL PRIVILEGES ON dbTest.* To 'user'@'hostname' IDENTIFIED BY 'password';"
+
+Go on phpmyadmin and log in using your new user and continue from here exactly like I described fro Windows.
 
 ## License
 
