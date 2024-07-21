@@ -28,7 +28,6 @@ class UserManagementController extends Controller
         return response()->json([
             "status" => "true",
             "message" => $user,
-            "userplm" => auth()->user()->role,
         ]);
     }
 
